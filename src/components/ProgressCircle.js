@@ -88,8 +88,7 @@ const ProgressCircle = ({ r, cx, cy, strokeWidth, progress, letter }) => {
             r={r}
             cy={cy}
             cx={cx}
-            // className='bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br'
-            strokeWidth={strokeWidth}
+             strokeWidth={strokeWidth}
             style={styles.backgroundDashes}
           ></circle>
           <circle
