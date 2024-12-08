@@ -915,8 +915,7 @@ function getImageByGroupType(type) {
   const activityList = () => {
     return(
 <Card 
-// className='bg-gradient-to-br from-green-400 to-blue-600 p-4'
-style={styles.cardView}
+ style={styles.cardView}
 >
   <div 
     style={{
@@ -942,17 +941,23 @@ style={styles.cardView}
           }}
         >
           <Box className="flex flex-row w-full items-center space-x-6">
-            <img
-            style={{backgroundColor: 'white'}}
-              className="w-20 h-20 p-2 rounded-full ring-2 ring-green-500"
-              src={exp.expenseType === 'settleUp' ? Settle : getImageByGroupType(exp.expenseType)}
-              alt="Expense"
-            />
-            <Box className="flex flex-col flex-grow">
-              <h1 className="text-gray text-lg font-semibold mb-1">{exp.expenseName}</h1>
-              <h1 className="text-gray text-sm mr-4">{`Paid by: ${exp.paidBy.name}`}</h1>
-            </Box>
-          </Box>
+  <img
+    style={{ backgroundColor: 'white' }}
+    className="w-20 h-20 p-2 rounded-full ring-2 ring-green-500"
+    src={exp.expenseType === 'settleUp' ? Settle : getImageByGroupType(exp.expenseType)}
+    alt="Expense"
+  />
+  <Box className="flex flex-col flex-grow">
+    <h1 className="text-gray text-lg font-semibold mb-1">{exp.expenseName}</h1>
+    <h1 
+      className="text-gray text-sm mr-4 break-words">
+      {`Paid by: ${exp.paidBy.name}`}
+    </h1>
+    <h1 
+          // style={{ width: 60, height: 20}}
+           className="text-gray text-xl font-semibold mt-2">{exp.expenseAmount}$</h1>
+  </Box>
+</Box>
           <div 
            className="flex flex-col md:flex-row items-start space-y-2 md:space-y-0 md:space-x-3 mt-2">
             <button
@@ -977,8 +982,7 @@ style={styles.cardView}
               Delete
             </button>
           </div>
-          <h1 
-           className="text-gray text-xl font-semibold mt-2 ml-40">{exp.expenseAmount}$</h1>
+         
         </CardContent>
       
       ))
@@ -986,9 +990,6 @@ style={styles.cardView}
       <div className="text-gray text-lg font-semibold mb-1" style={{marginLeft: '2%', marginTop: '20%'}}>
               <h1>The activity list is empty</h1>
               </div>
-      // <div className="mt-20 text-center">
-      //   <h1 className="text-lg"></h1>
-      // </div>
     )}
   </div>
 </Card>
@@ -1315,7 +1316,7 @@ style={{marginTop: '3%',
     fontFamily: 'Lato',
     borderRadius: 8,
     marginLeft: '5%',
-    width: '40%',
+    width: '20%',
     height: 55,
     color: 'grey',
     textAlign: 'center',
@@ -1335,7 +1336,7 @@ style={{marginTop: '3%',
   // alignItems: 'center',
   justifyContent: 'center',
    width: '60%',
- justifyContent: 'space-between'
+ justifyContent: 'space-around'
   
 }}>
 

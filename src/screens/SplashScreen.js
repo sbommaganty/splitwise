@@ -9,7 +9,7 @@ function SplashScreen() {
       <div className="App">
          <div className='Main_view'>
          <img src={logo} className="App-logo" alt="logo"/>
-         <h1 className='title'>SPLITWISE</h1>
+         <h1 className='title'>SPLIT AND SHARE</h1>
          <h1 className='caption'>Split bills the easy way</h1>
          </div>
          </div>

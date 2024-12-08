@@ -38,7 +38,7 @@ const styles = {
     // marginTop: '2%',
     border: '1px solid black',
     borderRadius: '0.75rem',
-    width: '90%',
+    width: '70%',
     maxWidth: '800px',
     height: '320px',
     display: 'flex',
@@ -633,7 +633,7 @@ function GroupScreen() {
         <CardContent>
           <h2 style={{marginTop: 1, fontSize: 15, fontFamily: 'Lato'}}>Would you like to create a new group? start entering the details</h2>
           <FormControl variant="standard" sx={styles.memberForm}>
-            <h2 style={{marginTop: 1, fontSize: 12, fontFamily: 'Lato'}}>Enter the group name</h2>
+            <h2 style={{marginTop: 1, fontSize: 12, marginBottom: 10,  fontFamily: 'Lato'}}>Enter the group name</h2>
             <Input
               id="name"
               sx={styles.inputField}
@@ -652,7 +652,7 @@ function GroupScreen() {
           type="button"
           disabled={isTypeSelect}
           onClick={() => handleGroupTypeChange(item.text)}
-          className={`flex items-center justify-center text-white border ${
+          className={`flex items-center justify-center text-black border ${
             groupType === item.text
               ? 'bg-white border-blue-500 text-blue-500'
               : 'bg-white border-cyan-500 text-cyan-500'
