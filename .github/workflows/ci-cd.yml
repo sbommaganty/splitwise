@@ -28,6 +28,12 @@ jobs:
           unset CI
           npm run build
 
+      - name: Add EC2 Host Key to Known Hosts
+        run: |
+          mkdir -p ~/.ssh  # Create the SSH directory if it doesn't exist
+          ssh-keyscan -H 35.183.97.89 >> ~/.ssh/known_hosts  # Add EC2's public IP to known hosts
+
+          
       - name: Deploy to EC2
         env:
           EC2_PUBLIC_IP: '35.183.97.89'      # Hardcoded IP Address
