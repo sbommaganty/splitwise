@@ -35,6 +35,12 @@ jobs:
           unset CI
           npm run build   
 
+          # Step 4: Build the app (with SKIP_PREFLIGHT_CHECK)
+      - name: Build the app
+        env:
+          SKIP_PREFLIGHT_CHECK: true
+        run: npm run build
+
       # Step 5: Deploy to EC2
       - name: Deploy to EC2
         env:
