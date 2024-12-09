@@ -16,9 +16,9 @@ function LoginSignUpScreen() {
   const [onSubmit, setOnSubmit] = useState(false);
   const [phoneNo, setPhoneNo] = useState('');
   const type =  isLogin ? 'sign_in' : 'sign_up';
-  const apiUrl = 'http://127.0.0.1:8000/api/'
+  const apiUrl = 'http://0.0.0.0:8000/api/'
   const navigate = useNavigate();
- 
+ console.log(apiUrl)
 
   const handleLoginClick = () => {
     setIsLogin(true);

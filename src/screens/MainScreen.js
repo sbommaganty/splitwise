@@ -527,7 +527,7 @@ function MainScreen() {
    const location = useLocation();
    const { userData, groupId, username } = location.state || {};
    const navigate = useNavigate();
-   const apiUrl = 'http://127.0.0.1:8001/api/'
+   const apiUrl = 'http://0.0.0.0:8001/api/'
 
    console.log("expenses", expenses);
    console.log("transfereed user data", username);
