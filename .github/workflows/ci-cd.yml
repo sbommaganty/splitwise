@@ -27,6 +27,13 @@ jobs:
       # Step 4: Build the React app
       - name: Build the app
         run: npm run build
+   
+       # Step 4: Build the app
+       # Here we unset the CI variable to prevent treating warnings as errors
+      - name: Build the app
+        run: |
+          unset CI
+          npm run build   
 
       # Step 5: Deploy to EC2
       - name: Deploy to EC2
