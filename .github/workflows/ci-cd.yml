@@ -26,10 +26,7 @@ jobs:
           SKIP_PREFLIGHT_CHECK: true
         run: |
           unset CI
-          cd splitwise # Navigate into the nested 'splitwise' folder
-          npm install  # Install dependencies
-          npm run build # Build the application
-
+          npm run build
 
       - name: Add EC2 Host Key to Known Hosts
         run: |
